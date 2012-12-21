@@ -10,12 +10,12 @@ use Params::Validate qw( :all );
 use Readonly;
 use Regexp::Common qw( number );
 
-use version; our $VERSION = qv('v0.0.2');
+use version; our $VERSION = qv('v0.0.3');
 
 # Module implementation here
 
 # constants
-Readonly my $NMA_URL        => 'https://nma.usk.bz/publicapi/'; 
+Readonly my $NMA_URL        => 'https://www.notifymyandroid.com/publicapi/';
 
 # string lengths in characters
 Readonly my $KEYLENGTH      => 48;
@@ -126,7 +126,7 @@ WebService::NotifyMyAndroid - Perl interface to Notify My Android web API
 
 =head1 VERSION
 
-This document describes WebService::NotifyMyAndroid version 0.0.1
+This document describes WebService::NotifyMyAndroid version 0.0.3.
 
 
 =head1 SYNOPSIS
@@ -152,17 +152,17 @@ This document describes WebService::NotifyMyAndroid version 0.0.1
   
 =head1 DESCRIPTION
 
-C<WebService::NotifyMyAndroid> is a Perl interface to the Notify My Android (https://nma.usk.bz/) web API.  One or more NMA API keys are necessary in order to use this module.
+C<WebService::NotifyMyAndroid> is a Perl interface to the Notify My Android (http://www.notifymyandroid.com/) web API.  One or more NMA API keys are necessary in order to use this module.
 
 =head1 INTERFACE 
 
 =head2 verify(%params)
 
-Documentation located at L<https://nma.usk.bz/api.php>.
+Documentation located at L<http://www.notifymyandroid.com/api.jsp>.
 
 =head2 notify(%params)
 
-Documentation located at L<https://nma.usk.bz/api.php>.
+Documentation located at L<http://www.notifymyandroid.com/api.jsp>.
 
 
 =head1 DIAGNOSTICS
@@ -224,6 +224,9 @@ L<WebService::Prowl>
 
 Steve Huff  C<< <shuff@cpan.org> >>
 
+=head1 CONTRIBUTORS
+
+Chisel Wright << <chisel@chizography.net> >>
 
 =head1 LICENCE AND COPYRIGHT
 
