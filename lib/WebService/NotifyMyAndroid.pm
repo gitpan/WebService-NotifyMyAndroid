@@ -3,14 +3,14 @@ use base qw( WebService::Simple );
 use warnings;
 use strict;
 
-binmode STDOUT, ":utf8";
+binmode STDOUT, ":encoding(UTF-8)";
 
 use Carp;
 use Params::Validate qw( :all );
 use Readonly;
 use Regexp::Common qw( number );
 
-use version; our $VERSION = qv('v0.0.3');
+use version; our $VERSION = qv('v0.0.4');
 
 # Module implementation here
 
@@ -226,7 +226,7 @@ Steve Huff  C<< <shuff@cpan.org> >>
 
 =head1 CONTRIBUTORS
 
-Chisel Wright << <chisel@chizography.net> >>
+Chisel Wright C<< <chisel@chizography.net> >>
 
 =head1 LICENCE AND COPYRIGHT
 

@@ -41,7 +41,7 @@
    "provides" : {
       "WebService::NotifyMyAndroid" : {
          "file" : "lib/WebService/NotifyMyAndroid.pm",
-         "version" : "v0.0.3"
+         "version" : "v0.0.4"
       }
    },
    "release_status" : "stable",
@@ -50,5 +50,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "v0.0.3"
+   "version" : "v0.0.4"
 }

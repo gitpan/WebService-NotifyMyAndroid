@@ -19,7 +19,7 @@ name: WebService-NotifyMyAndroid
 provides:
   WebService::NotifyMyAndroid:
     file: lib/WebService/NotifyMyAndroid.pm
-    version: v0.0.3
+    version: v0.0.4
 requires:
   Carp: 0
   Data::Printer: 0
@@ -33,4 +33,4 @@ requires:
   version: 0
 resources:
   license: http://dev.perl.org/licenses/
-version: v0.0.3
+version: v0.0.4
