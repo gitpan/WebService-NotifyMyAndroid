@@ -1,7 +1,14 @@
+# http://blogs.perl.org/users/sawyer_x/2010/08/distzilla-strictures-tip.html
+use strictures 1;
+
 package WebService::NotifyMyAndroid;
+{
+  $WebService::NotifyMyAndroid::VERSION = '0.0.5_01';
+}
+{
+  $WebService::NotifyMyAndroid::DIST = 'WebService-NotifyMyAndroid';
+}
 use base qw( WebService::Simple );
-use warnings;
-use strict;
 
 binmode STDOUT, ":encoding(UTF-8)";
 
@@ -9,8 +16,6 @@ use Carp;
 use Params::Validate qw( :all );
 use Readonly;
 use Regexp::Common qw( number );
-
-use version; our $VERSION = qv('v0.0.4');
 
 # Module implementation here
 
@@ -24,7 +29,12 @@ Readonly my $EVENTLENGTH    => 1000;
 Readonly my $DESCLENGTH     => 10000;
 
 # validation regexes
-Readonly my $KEYREGEX       => $RE{num}{int}{-base => 16}{-places => $KEYLENGTH};
+## we're using the 'weird' format for setting flags because strictures
+## complains about 'use of multidimensional array emulation' with the
+## "{-base => 16}" syntax
+##  for more information read the documentation for strictures,
+##  multidimensional and Regexp::Common (Flag syntax)
+Readonly my $KEYREGEX       => $RE{num}{int}{"-base$;16"}{"-places$;$KEYLENGTH"};
 Readonly my $APPREGEX       => ".{1,$APPLENGTH}";
 Readonly my $EVENTREGEX     => ".{1,$EVENTLENGTH}";
 Readonly my $DESCREGEX      => ".{1,$DESCLENGTH}";
@@ -117,17 +127,19 @@ sub _valid_API_key {
 }
 
 1; # Magic true value required at end of module
+# ABSTRACT: Perl interface to Notify My Android web API
+
 __END__
+
+=pod
 
 =head1 NAME
 
 WebService::NotifyMyAndroid - Perl interface to Notify My Android web API
 
-
 =head1 VERSION
 
-This document describes WebService::NotifyMyAndroid version 0.0.3.
-
+version 0.0.5_01
 
 =head1 SYNOPSIS
 
@@ -149,7 +161,6 @@ This document describes WebService::NotifyMyAndroid version 0.0.3.
     );
     defined( $message->{success} ) or die( $message->{error}->{content} );
 
-  
 =head1 DESCRIPTION
 
 C<WebService::NotifyMyAndroid> is a Perl interface to the Notify My Android (http://www.notifymyandroid.com/) web API.  One or more NMA API keys are necessary in order to use this module.
@@ -164,16 +175,13 @@ Documentation located at L<http://www.notifymyandroid.com/api.jsp>.
 
 Documentation located at L<http://www.notifymyandroid.com/api.jsp>.
 
-
 =head1 DIAGNOSTICS
 
 FIXME!  Error handling is pathetic at this point.
 
-
 =head1 CONFIGURATION AND ENVIRONMENT
 
 WebService::NotifyMyAndroid requires no configuration files or environment variables.  Future development will support a custom NMA API URL.
-
 
 =head1 DEPENDENCIES
 
@@ -193,7 +201,6 @@ WebService::NotifyMyAndroid requires no configuration files or environment varia
 
 None reported.
 
-
 =head1 BUGS AND LIMITATIONS
 
 No bugs have been reported.
@@ -201,7 +208,6 @@ No bugs have been reported.
 Please report any bugs or feature requests to
 C<bug-webservice-nma@rt.cpan.org>, or through the web interface at
 L<http://rt.cpan.org>.
-
 
 =head1 TODO
 
@@ -218,23 +224,6 @@ L<http://rt.cpan.org>.
 =head1 SEE ALSO
 
 L<WebService::Prowl>
-
-
-=head1 AUTHOR
-
-Steve Huff  C<< <shuff@cpan.org> >>
-
-=head1 CONTRIBUTORS
-
-Chisel Wright C<< <chisel@chizography.net> >>
-
-=head1 LICENCE AND COPYRIGHT
-
-Copyright (c) 2011, Steve Huff C<< <shuff@cpan.org> >>. All rights reserved.
-
-This module is free software; you can redistribute it and/or
-modify it under the same terms as Perl itself. See L<perlartistic>.
-
 
 =head1 DISCLAIMER OF WARRANTY
 
@@ -258,3 +247,26 @@ RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A
 FAILURE OF THE SOFTWARE TO OPERATE WITH ANY OTHER SOFTWARE), EVEN IF
 SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF
 SUCH DAMAGES.
+
+=head1 AUTHORS
+
+=over 4
+
+=item *
+
+Steve Huff <shuff@cpan.org>
+
+=item *
+
+Chisel <chisel@chizography.net>
+
+=back
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2012 by Chisel Wright.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut

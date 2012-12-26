@@ -1,0 +1,49 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.70.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 d71602b207980b3e53d40eee9af0a6c241382a9c Build.PL
+SHA1 2b8338bc671fc58c7098dfb0141d42863323b53d Changes
+SHA1 20a111f37382cd1957ca05c8ab4b85d526679129 LICENSE
+SHA1 29ca2da33347f179065670b50dccafcdc2684991 MANIFEST
+SHA1 3d040e3838b730343c394fe18951c016cc9ea765 META.json
+SHA1 7f0da2193dc98a9ac807f653e8f5e6ceadc4c634 META.yml
+SHA1 45ed6532141801b00b42905f39f72e6c49a199c1 Makefile.PL
+SHA1 f5cefd8a68beeca40fa814c0070292cb7dfc1dd1 README
+SHA1 1fa12a5a85398018576b70b179c02d28fdbf364a README.cpan
+SHA1 72e469528e9028534069040899957685924fb609 README.install
+SHA1 967ef2691a262d5cd17c1f75994c06dd2b97eb7e README.mkdn
+SHA1 dc07bb1b931ed68b02a13834ff599542eb54041d dist.ini
+SHA1 92e8050c14b50de558c5089d1a6cd3a07e8cbdf1 lib/WebService/NotifyMyAndroid.pm
+SHA1 bfa43b6de01efd4c79f35398a4b155cb7545de1b script/notify-my-android
+SHA1 86cd488198ef1835477613f6a2256994986660aa t/00-load.t
+SHA1 54f1ef1ef8761bdfc0d2d3fc236443e5669d005f t/00.load.t
+SHA1 443ea36f6ef9078f7fee7aab5bff0fba36919ab9 t/01.verify.t
+SHA1 75aeb0b184e0242acb79e2ebea442e1cc3b8b5b3 t/02.notify.t
+SHA1 eeec6053b926a7a2e269887b198d1b30f700a2da t/perlcritic.t
+SHA1 452bdb1dfce4ac4ef584d024024a06a6f5b884ea t/perlcriticrc
+SHA1 d685a1a9d85b958c0ee2490af1865ae383898efb t/pod-coverage.t
+SHA1 a6d25bdba403963935cdbd7a8b58fe23c06db3af t/pod.t
+SHA1 6ea81e3865946a14536f97ccc65fee4b218c8148 t/release-kwalitee.t
+SHA1 455d1dd1867212a665ad5ea4126b572411de300c t/release-no-tabs.t
+SHA1 9433c240fe590bc404ab68ff63984df763e347ed t/release-pod-coverage.t
+SHA1 b30cbdfaf935017c4568c0c91b242438cb87786e t/release-pod-syntax.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (GNU/Linux)
+
+iEYEARECAAYFAlDbHH8ACgkQh4j7xTiFuxEc8QCgpki3R2HwjGv8PZPgRMCDZ/b7
+eFIAoI+WqSqkB0VUnVX3y9Gy/mTNNL6J
+=xbVR
+-----END PGP SIGNATURE-----

@@ -16,7 +16,7 @@
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "Module::Build" : "0.40",
+            "Module::Build" : "0.4",
             "Test::More" : "0",
             "Test::Perl::Critic" : "0",
             "Test::Pod" : "1.14",
