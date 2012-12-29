@@ -1,8 +1,6 @@
-Build.PL
 Changes
 LICENSE
 MANIFEST
-META.json
 META.yml
 Makefile.PL
 README
@@ -11,6 +9,7 @@ README.install
 README.mkdn
 SIGNATURE
 dist.ini
+ignore.txt
 lib/WebService/NotifyMyAndroid.pm
 script/notify-my-android
 t/00-load.t

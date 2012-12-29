@@ -29,4 +29,4 @@ requires:
 resources:
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=WebService-NotifyMyAndroid
   repository: git://github.com/chiselwright/webservice-notifymyandroid.git
-version: 0.0.5_01
+version: 0.0.5_02

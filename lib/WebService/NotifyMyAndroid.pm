@@ -3,7 +3,7 @@ use strictures 1;
 
 package WebService::NotifyMyAndroid;
 {
-  $WebService::NotifyMyAndroid::VERSION = '0.0.5_01';
+  $WebService::NotifyMyAndroid::VERSION = '0.0.5_02';
 }
 {
   $WebService::NotifyMyAndroid::DIST = 'WebService-NotifyMyAndroid';
@@ -139,7 +139,7 @@ WebService::NotifyMyAndroid - Perl interface to Notify My Android web API
 
 =head1 VERSION
 
-version 0.0.5_01
+version 0.0.5_02
 
 =head1 SYNOPSIS
 
