@@ -27,6 +27,7 @@ my %WriteMakefileArgs = (
   "NAME" => "WebService::NotifyMyAndroid",
   "PREREQ_PM" => {
     "Carp" => 0,
+    "LWP::Protocol::https" => 0,
     "Params::Validate" => 0,
     "Readonly" => 0,
     "Regexp::Common" => 0,
@@ -34,7 +35,7 @@ my %WriteMakefileArgs = (
     "base" => 0,
     "strictures" => 1
   },
-  "VERSION" => "0.0.5_02",
+  "VERSION" => "0.0.5_03",
   "test" => {
     "TESTS" => "t/*.t"
   }

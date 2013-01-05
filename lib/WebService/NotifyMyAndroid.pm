@@ -3,7 +3,7 @@ use strictures 1;
 
 package WebService::NotifyMyAndroid;
 {
-  $WebService::NotifyMyAndroid::VERSION = '0.0.5_02';
+  $WebService::NotifyMyAndroid::VERSION = '0.0.5_03';
 }
 {
   $WebService::NotifyMyAndroid::DIST = 'WebService-NotifyMyAndroid';
@@ -16,6 +16,10 @@ use Carp;
 use Params::Validate qw( :all );
 use Readonly;
 use Regexp::Common qw( number );
+
+# make sure we have the https protocol available to us;
+# we need this to do anything this the API url
+use LWP::Protocol::https;
 
 # Module implementation here
 
@@ -139,7 +143,7 @@ WebService::NotifyMyAndroid - Perl interface to Notify My Android web API
 
 =head1 VERSION
 
-version 0.0.5_02
+version 0.0.5_03
 
 =head1 SYNOPSIS
 
