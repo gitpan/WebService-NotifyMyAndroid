@@ -3,7 +3,7 @@ NAME
     API
 
 VERSION
-    version 0.0.5_03
+    version 0.0.5_04
 
 SYNOPSIS
         use WebService::NotifyMyAndroid;

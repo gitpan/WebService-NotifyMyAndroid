@@ -12,7 +12,7 @@ build_requires:
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300028, CPAN::Meta::Converter version 2.120921'
+generated_by: 'Dist::Zilla version 4.300027, CPAN::Meta::Converter version 2.120630'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -20,6 +20,8 @@ meta-spec:
 name: WebService-NotifyMyAndroid
 requires:
   Carp: 0
+  Data::Printer: 0
+  FindBin::libs: 0
   LWP::Protocol::https: 0
   Params::Validate: 0
   Readonly: 0
@@ -29,5 +31,5 @@ requires:
   strictures: 1
 resources:
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=WebService-NotifyMyAndroid
-  repository: git://github.com/chiselwright/webservice-notifymyandroid.git
-version: 0.0.5_03
+  repository: git://github.com/chiselwright/webservice-notifymyandroid
+version: 0.0.5_04

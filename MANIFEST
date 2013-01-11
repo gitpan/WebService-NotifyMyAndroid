@@ -20,7 +20,6 @@ t/perlcritic.t
 t/perlcriticrc
 t/pod-coverage.t
 t/pod.t
-t/release-kwalitee.t
 t/release-no-tabs.t
 t/release-pod-coverage.t
 t/release-pod-syntax.t
