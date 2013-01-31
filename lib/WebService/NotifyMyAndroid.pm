@@ -3,7 +3,7 @@ use strictures 1;
 
 package WebService::NotifyMyAndroid;
 {
-  $WebService::NotifyMyAndroid::VERSION = '0.0.5_04';
+  $WebService::NotifyMyAndroid::VERSION = '0.0.6';
 }
 {
   $WebService::NotifyMyAndroid::DIST = 'WebService-NotifyMyAndroid';
@@ -133,6 +133,7 @@ sub _valid_api_key {
 1; # Magic true value required at end of module
 # ABSTRACT: Perl interface to Notify My Android web API
 
+__END__
 
 =pod
 
@@ -142,7 +143,7 @@ WebService::NotifyMyAndroid - Perl interface to Notify My Android web API
 
 =head1 VERSION
 
-version 0.0.5_04
+version 0.0.6
 
 =head1 SYNOPSIS
 
@@ -273,7 +274,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
-
-__END__
-
